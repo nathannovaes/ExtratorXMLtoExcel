@@ -5,7 +5,6 @@ Objetivo: Extrair da nota fiscal os dados que uma pessoa precisaria olhar, trata
 ## Ferramentas:
 - ElementTree XML API
 - OpenPyXl API
-- Pandas - Python Data Analysis Library
 
 ## Informações importantes:
 - A variável root corresponde ao nó principal da nossa árvore. No Exemplo A o nosso
