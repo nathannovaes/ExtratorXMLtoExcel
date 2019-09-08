@@ -88,7 +88,7 @@ while quant >= 1:
         if root[0][0][i][0][5].tag == 'CFOP':
             cfop = root[0][0][i][0][5].text
             print(cfop)
-            
+
         # Caso não encontre, o programa procura pega tag CFOP
         else:
             j = 1
@@ -105,26 +105,54 @@ while quant >= 1:
 
         # Valor total
         # Verifica se a tag é vProd
-        if root[0][0][i][0][9].tag == 'vProd':
-            vProd = root[0][0][i][0][9].text
-            print(vProd)
-        # Caso não encontre, o programa procura pega tag vProd
-        else:
-            j = 1
-            while root[0][0][i][0][j].tag != 'vProd':
-                j+=1
-            vProd = root[0][0][i][0][j].text
-            print(vProd)
+        try:
+            if root[0][0][i][0][9].tag == 'vProd':
+                j = 0
 
+                # Verifica se existe desconto no valor do produto
+                while root[0][0][i][0][j].tag != 'vDesc':
+                    j+=1
+
+                vProd = float(root[0][0][i][0][9].text) - float(root[0][0][i][0][j].text)
+                print(vProd)
+        except:
+            # Se não tiver desconto no valor do produto
+            if root[0][0][i][0][9].tag == 'vProd':
+                vProd = root[0][0][i][0][9].text
+                print(vProd)
+        # Caso não encontre, o programa procura pela tag vProd
+        else:
+            try:
+                j = 1
+                while root[0][0][i][0][j].tag != 'vProd':
+                    j+=1
+
+                # Verifica se existe desconto no valor do produto
+                k = 0
+                while root[0][0][i][0][k].tag != 'vDesc':
+                    k += 1
+
+                vProd = float(root[0][0][i][0][j].text) - float(root[0][0][i][0][k].text)
+                print(vProd)
+
+            except:
+                # Se não tiver desconto no valor do produto
+                j = 1
+                while root[0][0][i][0][j].tag != 'vProd':
+                    j += 1
+                vProd = root[0][0][i][0][j].text
+                print(vProd)
         # Valor ICMS
         # Faz uma validação para ver se o produto tem imposto. Se for CFOP 5202, ele tem.
 
-        if root[0][0][i][0][5].text == '5202':
+        #if root[0][0][i][0][5].text == '5202':
+        if cfop == '5202':
             # Procura a tag ICMS
             j = 0
             while root[0][0][i][1][j].tag != 'ICMS':
                 j += 1
             # Encontrou a tag ICMS
+
             # Procura pela tag vICMS
             k = 0
             while root[0][0][i][1][j][0][k].tag != 'vICMS':
