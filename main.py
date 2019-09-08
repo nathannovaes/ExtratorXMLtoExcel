@@ -6,7 +6,7 @@ from tratamentoProdutos import *
 from verificaPisConfins import *
 
 # A variável quant é igual a quantidade de arquivos que serão extraídos
-quant = 3
+quant = 18
 listaProdutos = []
 pisconfins = ''
 while quant >= 1:

@@ -66,6 +66,6 @@ def tratamentoProdutos(listaB, data, nome, municipio, numNF, natureza,pisconfins
     '''
     respostaFinal = [posicao for posicao in resposta if posicao not in retiraRep]
 
-
+    # Chama a função listaProdutos para escrever na planilha excel linha por linha com os valores encontrados
     for i in range(len(respostaFinal)):
         listaProdutos(data, nome, municipio, numNF, 'Devolução' ,natureza, listaB[respostaFinal[i]][0], listaB[respostaFinal[i]][1], pisconfins, listaB[respostaFinal[i]][2], '0', listaB[respostaFinal[i]][3], Venc)
