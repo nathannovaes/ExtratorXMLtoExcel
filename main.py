@@ -6,7 +6,7 @@ from tratamentoProdutos import *
 from verificaPisConfins import *
 
 # A variável quant é igual a quantidade de arquivos que serão extraídos
-quant = 1
+quant = 2
 listaProdutos = []
 pisconfins = ''
 while quant >= 1:
@@ -76,12 +76,20 @@ while quant >= 1:
     para a próxima tag. Isso vai acontecer até que tenham acabado todas as tags det.
     """
 
-    i = 3
+    i = 0
+    # Verifica onde começa a lista dos produtos
+    while root[0][0][i].tag != 'det':
+        i += 1
+
+
+    # Verifica se existe desconto no valor do produto
     while root[0][0][i].tag == 'det':
+
         # Nome do produto
         print(root[0][0][i][0][2].text)
         fornecedor = encontraFornecedor(root[0][0][i][0][2].text)
         print(fornecedor)
+
         # Código fiscal de operação
 
         # Verifica se a tag é CFOP

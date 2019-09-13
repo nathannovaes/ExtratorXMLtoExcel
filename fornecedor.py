@@ -26,7 +26,7 @@ def encontraFornecedor(produto):
       return 'Hemmer'
   elif produto.find('JUXX') != -1 or produto.find('Juxx') != -1:
       return 'Juxx'
-  elif produto.find('KELCO') != -1 or produto.find('PIPICAT') != -1 or produto.find(' KEL') != -1 or produto.find('Kelco') != -1 or produto.find('Pipicat') != -1:
+  elif produto.find('KELCO') != -1 or produto.find('PIPICAT') != -1 or produto.find(' KEL') != -1 or produto.find('Kelco') != -1 or produto.find('Pipicat') != -1 or produto.find('Kel') != -1:
       return 'Kelco'
   elif produto.find('MASTIG') != -1 or produto.find('Mastig') != -1:
       return 'Mastig'
@@ -38,7 +38,7 @@ def encontraFornecedor(produto):
       return 'Prata'
   elif produto.find(' RIO ') != -1 or produto.find(' Rio ') != -1:
       return 'Rio'
-  elif produto.find('ACQUISSIMA') != -1 or produto.find('Acquissima') != -1:
+  elif produto.find('ACQUISSIMA') != -1 or produto.find('Acquissima') != -1 or produto.find('POMPEIA') != -1 or produto.find('Pompeia') != -1:
       return 'Socorro'
   elif produto.find('TRADIPET') != -1 or produto.find('Tradipet') != -1:
       return 'Tradipet'
