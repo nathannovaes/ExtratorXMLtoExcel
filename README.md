@@ -35,3 +35,12 @@ emit.
 ```
 
 
+## Step by Step
+
+1. Faça o download dos arquivos XMLs.
+
+2. Enumere os arquivos.
+![Farmers Market Finder Demo](steps/enumerar.gif)
+
+3. Faça a limpeza dos aquivos.
+
