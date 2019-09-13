@@ -45,5 +45,9 @@ emit.
 3. Faça a limpeza dos arquivos.
 ![Limpar arquivos](steps/limpar.gif)
 
+4. Abra o arquivo main.py e coloque a quantidade de xmls que serão extraídos.
+![Quantidade XMLs](steps/quantXmls.gif)
+
+
 
 
