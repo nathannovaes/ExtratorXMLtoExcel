@@ -48,6 +48,15 @@ emit.
 4. Abra o arquivo main.py e coloque a quantidade de xmls que serão extraídos.
 ![Quantidade XMLs](steps/quantXmls.gif)
 
+5. Crie o Excel com o nome "teste" e de extensão .xlsx dentro da pasta fonte do projeto.
+
+6. Execute o arquivo main.py
+![Executar o programa](steps/executar.gif)
+
+7. Vá na pasta do projeto e abra o arquivo teste.xlsx, para ver o resultado da extração.
+![Resultado](steps/resultado.gif)
+
+
 
 
 
