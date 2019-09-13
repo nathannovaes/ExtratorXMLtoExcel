@@ -40,7 +40,10 @@ emit.
 1. Faça o download dos arquivos XMLs.
 
 2. Enumere os arquivos.
-![Farmers Market Finder Demo](steps/enumerar.gif)
+![Enumerar arquivos](steps/enumerar.gif)
 
-3. Faça a limpeza dos aquivos.
+3. Faça a limpeza dos arquivos.
+![Limpar arquivos](steps/limpar.gif)
+
+
 
