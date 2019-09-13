@@ -15,6 +15,8 @@ def verificaPisConfis(fornecedor):
         return 'Isento'
     elif fornecedor == 'DGoias':
         return 'Normal'
+    elif fornecedor == 'Dori':
+        return 'Normal'
     elif fornecedor == 'Goes':
         return 'Normal'
     elif fornecedor == 'Hemmer':
