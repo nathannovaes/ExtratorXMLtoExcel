@@ -4,9 +4,10 @@ import xml.etree.ElementTree as ET
 from fornecedor import *
 from tratamentoProdutos import *
 from verificaPisConfins import *
+from convertFloat import *
 
 # A variável quant é igual a quantidade de arquivos que serão extraídos
-quant = 2
+quant = 17
 listaProdutos = []
 pisconfins = ''
 while quant >= 1:
@@ -121,7 +122,7 @@ while quant >= 1:
                 while root[0][0][i][0][j].tag != 'vDesc':
                     j+=1
 
-                vProd = float(root[0][0][i][0][9].text) - float(root[0][0][i][0][j].text)
+                vProd = limpaFloat(root[0][0][i][0][9].text) - limpaFloat(root[0][0][i][0][j].text)
                 print(vProd)
         except:
             # Se não tiver desconto no valor do produto
@@ -140,7 +141,7 @@ while quant >= 1:
                 while root[0][0][i][0][k].tag != 'vDesc':
                     k += 1
 
-                vProd = float(root[0][0][i][0][j].text) - float(root[0][0][i][0][k].text)
+                vProd = limpaFloat(root[0][0][i][0][j].text) - limpaFloat(root[0][0][i][0][k].text)
                 print(vProd)
 
             except:

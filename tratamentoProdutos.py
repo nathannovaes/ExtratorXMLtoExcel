@@ -27,10 +27,10 @@ def tratamentoProdutos(listaB, data, nome, municipio, numNF, natureza,pisconfins
 
     for i in range(len(repeticao)):
         # Calcula o valor do imposto
-        vICMS = float(listaB[repeticao[i][0]][2]) + float(listaB[repeticao[i][1]][2])
+        vICMS = limpaFloat(listaB[repeticao[i][0]][2]) + limpaFloat(listaB[repeticao[i][1]][2])
 
         # Calcula o valor do produto
-        vProd = float(listaB[repeticao[i][0]][3]) + float(listaB[repeticao[i][1]][3])
+        vProd = limpaFloat(listaB[repeticao[i][0]][3]) + limpaFloat(listaB[repeticao[i][1]][3])
 
         # Monta o novo registro do fornecedor. Os valores já entram formatados ".2f"
         novoValor = (listaB[repeticao[i][0]][0], listaB[repeticao[i][0]][1], '{:0,.2f}'.format(vICMS), '{:0,.2f}'.format(vProd))

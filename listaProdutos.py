@@ -18,13 +18,14 @@ print(a[1][2])
 
 
 '''
+from convertFloat import *
 from escreveExcel import *
 lista =[]
 i = 0
 j = 0
 #Lista os produtos e guarda
 def listaProdutos(data, nome, municipio, numNF, nat, natureza, fornecedor, cfop, pisconfins, vICMS, zero, vProd, Venc):
-    b =(data, nome, municipio, numNF, nat, natureza, fornecedor, int(cfop), pisconfins, float(vICMS), zero, zero, float(vProd), float(vProd), zero, float(vProd), Venc)
+    b =(data, nome, municipio, numNF, nat, natureza, fornecedor, int(cfop), pisconfins, limpaFloat(vICMS), zero, zero, limpaFloat(vProd), limpaFloat(vProd), zero, limpaFloat(vProd), Venc)
 
     lista.append(b)
 
